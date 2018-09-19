@@ -1,0 +1,68 @@
+#!/bin/zsh
+#
+
+jobname=hdamp1-pTmin64_PSon
+name=$jobname-$SGE_TASK_ID
+echo $name 
+
+
+export PYSEED=$SGE_TASK_ID
+echo 'seed ' $PYSEED 
+
+
+
+source /cvmfs/sft.cern.ch/lcg/releases/LCG_85/gcc/4.9.3/x86_64-slc6/setup.sh
+source /cvmfs/sft.cern.ch/lcg/releases/LCG_85/Python/2.7.10/x86_64-slc6-gcc49-opt/Python-env.sh
+source /afs/desy.de/user/j/jung/scratch-dust/cvs/rivet-2.6.0/local/rivetenv.sh
+
+cd $TMP
+
+mkdir bin
+cd bin
+
+cp -rp /afs/desy.de/user/m/mendizam/ATLAS/POWHEG/main31 .
+#cp /afs/desy.de/user/m/mendizam/ATLAS/LHE_files/hdampDef-0.lhe  .
+cp /afs/desy.de/user/m/mendizam/ATLAS/LHE_files/hdamp1_pTmin64-0.lhe .
+cp /afs/desy.de/user/m/mendizam/ATLAS/POWHEG/powheg-Z-CUETP8M1.cmnd .
+#cp /afs/desy.de/user/j/jung/public/summerstudents/2018/pythia/main31.cmnd .
+
+ln -s powheg-Z-CUETP8M1.cmnd main31.cmnd
+#ln -s hdampDef-0.lhe  pwgevents.lhe
+ln -s hdamp1_pTmin64-0.lhe  pwgevents.lhe
+
+cp -rp /afs/desy.de/user/j/jung/public/summerstudents/2018/rivet/* .
+
+export RIVET_ANALYSIS_PATH=$RIVET_ANALYSIS_PATH:$PWD
+export RIVET_ANALYSIS_PATH=$PWD
+echo ' RIVET_ANALYSIS_PATH = ' $RIVET_ANALYSIS_PATH
+echo ' RIVET_REF_PATH = ' $RIVET_REF_PATH
+ls -rtl
+
+echo ' before running pythia '
+outfile=/tmp/${name}.dat
+echo ' HEPMC output file = ' ${outfile}
+export HEPMCOUT=${outfile}
+mkfifo ${outfile}
+echo ' after mkfifo '
+
+nice ./main31 > pythia.out &
+#nice ./main31 > ${name}.out&
+#rivet -a myanalysis $HEPMCOUT> rivet.out
+rivet --pwd -a ATLAS_2015_I1408516 $HEPMCOUT > rivet.out
+#rivet -a CMS_2010_S8656010 -a Azimuthal_13TeV_ak4 $HEPMCOUT > rivet-${name}.out
+#rivet -a MC_PRINTEVENT -a READ_HEPMC  $HEPMCOUT > rivet.out
+#rivet -a MC_PRINTEVENT -a nullexample  $HEPMCOUT> rivet.out
+
+echo ' after the job finished '
+echo $pwd
+rm ${outfile}
+ls -rtl 
+
+output=/afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files
+
+scp ${name}.out  ${output}/.
+scp rivet-${name}.out ${output}/.
+mv Rivet.yoda ${name}.yoda
+scp ${name}.yoda  ${output}/.
+
+ls -rtl

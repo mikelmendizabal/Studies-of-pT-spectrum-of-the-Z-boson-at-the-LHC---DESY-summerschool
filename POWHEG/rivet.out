@@ -1,0 +1,11 @@
+
+Rivet.Analysis.Handler: INFO  Finalising analyses
+Rivet.Analysis.ATLAS_2015_I1408516: WARN  Could not normalize histo /ATLAS_2015_I1408516/d23-x01-y01
+Rivet.Analysis.ATLAS_2015_I1408516: WARN  Could not normalize histo /ATLAS_2015_I1408516/d24-x01-y01
+Rivet.Analysis.ATLAS_2015_I1408516: WARN  Could not normalize histo /ATLAS_2015_I1408516/d25-x01-y01
+Rivet.Analysis.Handler: INFO  Processed 25000 events
+
+The MCnet usage guidelines apply to Rivet: see http://www.montecarlonet.org/GUIDELINES
+Please acknowledge plots made with Rivet analyses, and cite arXiv:1003.0694 (http://arxiv.org/abs/1003.0694)
+
+

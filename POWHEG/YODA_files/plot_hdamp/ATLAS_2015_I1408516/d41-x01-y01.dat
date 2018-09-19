@@ -1,0 +1,90 @@
+# BEGIN PLOT
+XTwosidedTicks=1
+YTwosidedTicks=1
+Title=$Z\rightarrow ee$, dressed level
+RatioPlotReference=/ATLAS_2015_I1408516/d41-x01-y01
+RatioPlot=1
+LogX=0
+LogY=1
+LegendXPos=0.05
+XLabel=$m_{\ell\ell}$ [GeV]
+YLabel=$\sigma$ [pb]
+DrawOnly=/ATLAS_2015_I1408516/d41-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef-0.yoda/ATLAS_2015_I1408516/d41-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp1-0.yoda/ATLAS_2015_I1408516/d41-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp0008-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+LegendYPos=0.95
+Legend=1
+LegendOnly=/ATLAS_2015_I1408516/d41-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef-0.yoda/ATLAS_2015_I1408516/d41-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp1-0.yoda/ATLAS_2015_I1408516/d41-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp0008-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+# END PLOT
+
+# BEGIN HISTO1D /ATLAS_2015_I1408516/d41-x01-y01
+ConnectBins=0
+ErrorBars=1
+IsRef=1
+Path=/ATLAS_2015_I1408516/d41-x01-y01
+PolyMarker=*
+Title=Data
+# xlow	 xhigh	 val	 errminus	 errplus
+1.200000e+01	2.000000e+01	1.420000e+00	9.939047e-02	9.939047e-02
+2.000000e+01	3.000000e+01	1.040000e+00	6.103746e-02	6.103746e-02
+3.000000e+01	4.600000e+01	1.030000e+00	5.294491e-02	5.294491e-02
+4.600000e+01	6.600000e+01	1.645000e+01	8.898644e-01	8.898644e-01
+6.600000e+01	1.160000e+02	5.276200e+02	1.544053e+01	1.544053e+01
+1.160000e+02	1.500000e+02	5.500000e+00	1.734045e-01	1.734045e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+ScaledBy=9.99999999987650850e-07
+Title= POWHEG+Pythia 8 (hdamp=Default)
+XLabel=~
+YLabel=~
+# xlow	 xhigh	 val	 errminus	 errplus
+1.200000e+01	2.000000e+01	2.466920e-03	1.744376e-03	1.744376e-03
+2.000000e+01	3.000000e+01	1.233460e-02	3.900544e-03	3.900544e-03
+3.000000e+01	4.600000e+01	2.343574e-02	5.376527e-03	5.376527e-03
+4.600000e+01	6.600000e+01	6.735925e+00	9.236137e-02	9.236137e-02
+6.600000e+01	1.160000e+02	5.442642e+02	8.270806e-01	8.270806e-01
+1.160000e+02	1.500000e+02	1.296366e+00	4.025315e-02	4.025315e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp1-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp1-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+ScaledBy=9.99999999994852324e-07
+Title= POWHEG+Pythia 8 (hdamp=1.0)
+XLabel=~
+YLabel=~
+# xlow	 xhigh	 val	 errminus	 errplus
+1.200000e+01	2.000000e+01	1.233340e-03	1.233340e-03	1.233340e-03
+2.000000e+01	3.000000e+01	1.110006e-02	3.700020e-03	3.700020e-03
+3.000000e+01	4.600000e+01	2.096678e-02	5.376004e-03	5.376004e-03
+4.600000e+01	6.600000e+01	6.541635e+00	9.069872e-02	9.069872e-02
+6.600000e+01	1.160000e+02	5.448366e+02	8.276925e-01	8.276925e-01
+1.160000e+02	1.500000e+02	1.299940e+00	4.023034e-02	4.023034e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp0008-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdamp0008-0.yoda/ATLAS_2015_I1408516/d41-x01-y01
+ScaledBy=1.00000000000103333e-06
+Title= POWHEG+Pythia 8 (hdamp=0.008)
+XLabel=~
+YLabel=~
+# xlow	 xhigh	 val	 errminus	 errplus
+1.200000e+01	2.000000e+01	0.000000e+00	0.000000e+00	0.000000e+00
+2.000000e+01	3.000000e+01	8.657240e-03	6.121593e-03	6.121593e-03
+3.000000e+01	4.600000e+01	1.731448e-02	8.657240e-03	8.657240e-03
+4.600000e+01	6.600000e+01	7.021020e+00	3.501637e-01	3.501637e-01
+6.600000e+01	1.160000e+02	5.483496e+02	2.981757e+00	2.981757e+00
+1.160000e+02	1.500000e+02	1.173056e+00	1.339077e-01	1.339077e-01
+# END HISTO1D
+

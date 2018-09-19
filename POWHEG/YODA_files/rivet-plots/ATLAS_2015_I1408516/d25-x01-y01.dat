@@ -1,0 +1,55 @@
+# BEGIN PLOT
+XTwosidedTicks=1
+YTwosidedTicks=1
+Title=$Z\rightarrow ee$, dressed level, $30\,\text{GeV}\leq m_{\ell\ell} < 46\,\text{GeV}$, $|y_{\ell\ell}| < 2.4$
+RatioPlotReference=/ATLAS_2015_I1408516/d25-x01-y01
+RatioPlot=1
+LogX=1
+LogY=1
+LegendXPos=0.05
+XLabel=$p_\text{T}^{\ell\ell}$ [GeV]
+YLabel=$1/\sigma$ $\text{d}\sigma/\text{d} p_\text{T}^{\ell\ell}$
+DrawOnly=/ATLAS_2015_I1408516/d25-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef_pT25_test.yoda/ATLAS_2015_I1408516/d25-x01-y01
+LegendYPos=0.3
+Legend=1
+LegendOnly=/ATLAS_2015_I1408516/d25-x01-y01 //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef_pT25_test.yoda/ATLAS_2015_I1408516/d25-x01-y01
+# END PLOT
+
+# BEGIN HISTO1D /ATLAS_2015_I1408516/d25-x01-y01
+ConnectBins=0
+ErrorBars=1
+IsRef=1
+Path=/ATLAS_2015_I1408516/d25-x01-y01
+PolyMarker=*
+Title=Data
+# xlow	 xhigh	 val	 errminus	 errplus
+4.500000e+01	5.500000e+01	2.853000e-02	8.114767e-04	8.114767e-04
+5.500000e+01	6.500000e+01	2.153000e-02	7.036062e-04	7.036062e-04
+6.500000e+01	7.500000e+01	1.517000e-02	5.808347e-04	5.808347e-04
+7.500000e+01	8.500000e+01	9.428000e-03	4.730940e-04	4.730940e-04
+8.500000e+01	1.050000e+02	5.793000e-03	2.575769e-04	2.575769e-04
+1.050000e+02	1.500000e+02	2.114000e-03	9.947038e-05	9.947038e-05
+1.500000e+02	2.000000e+02	5.464000e-04	3.754289e-05	3.754289e-05
+2.000000e+02	9.000000e+02	2.155000e-05	2.373437e-06	2.373437e-06
+# END HISTO1D
+
+
+# BEGIN HISTO1D //afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef_pT25_test.yoda/ATLAS_2015_I1408516/d25-x01-y01
+LineColor=red
+LineStyle=solid
+Path=//afs/desy.de/user/m/mendizam/ATLAS/POWHEG/YODA_files/hdampDef_pT25_test.yoda/ATLAS_2015_I1408516/d25-x01-y01
+ScaledBy=3.99999999999706078e-05
+Title=hdampDef_pT25_test
+XLabel=~
+YLabel=~
+# xlow	 xhigh	 val	 errminus	 errplus
+4.500000e+01	5.500000e+01	0.000000e+00	0.000000e+00	0.000000e+00
+5.500000e+01	6.500000e+01	0.000000e+00	0.000000e+00	0.000000e+00
+6.500000e+01	7.500000e+01	0.000000e+00	0.000000e+00	0.000000e+00
+7.500000e+01	8.500000e+01	0.000000e+00	0.000000e+00	0.000000e+00
+8.500000e+01	1.050000e+02	0.000000e+00	0.000000e+00	0.000000e+00
+1.050000e+02	1.500000e+02	0.000000e+00	0.000000e+00	0.000000e+00
+1.500000e+02	2.000000e+02	0.000000e+00	0.000000e+00	0.000000e+00
+2.000000e+02	9.000000e+02	0.000000e+00	0.000000e+00	0.000000e+00
+# END HISTO1D
+
